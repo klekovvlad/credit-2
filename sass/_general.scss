@@ -1,0 +1,63 @@
+$brand-color: #1E66AF;
+$red-color: #D6573C;
+$font-color: #252525;
+$purple-color: #AE30FE;
+body {
+    font-family: $fonts-reg;
+    color: #fff;
+    background: url(../img/mainbg.webp) no-repeat center top;
+    background-size: cover;
+}
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+.animation-up {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+.animation-up-end{
+    animation: upAnimation 0.5s ease-in-out forwards;
+    opacity: 1;
+}
+@keyframes upAnimation {
+    0% {
+        transform: translateY(100px);
+    }
+    75% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.animation-superman {
+    transform: translateX(100px) translateY(100px) scale(0.3);
+    animation: supermanAnimation 0.9s ease-out forwards;
+}
+@keyframes supermanAnimation {
+    100% {
+        transform: translateX(0px) translateY(0px) scale(1.0); 
+    }
+}
+.animation-topshow {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    animation: topshop 0.6s linear forwards;
+}
+@keyframes topshop {
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0px 15px;
+    }
+}
