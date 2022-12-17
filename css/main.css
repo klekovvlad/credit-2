@@ -44,6 +44,9 @@ a {
 body {
   font-family: "Jost-Regular", sans-serif;
   color: #fff;
+}
+
+.hero {
   background: url(../img/mainbg.webp) no-repeat center top;
   background-size: cover;
 }
@@ -207,6 +210,7 @@ body {
           justify-content: center;
   position: relative;
   z-index: 1;
+  padding-bottom: 100px;
 }
 .main__wrapper h1 {
   text-align: center;
@@ -258,7 +262,7 @@ body {
   max-width: 700px;
   position: absolute;
   left: -150px;
-  bottom: -90px;
+  bottom: 0px;
   pointer-events: none;
   z-index: -1;
 }
@@ -464,6 +468,12 @@ body {
   .company__wrapper {
     grid-template-columns: 1fr;
     grid-gap: 30px;
+  }
+  .company__item {
+    min-height: 550px;
+  }
+  .company__item-bottom {
+    padding-top: 40px;
   }
 }
 .about {
